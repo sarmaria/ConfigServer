@@ -2,7 +2,7 @@ spring:
   application:
     name: "configserver"
   profiles:
-    active: native
+    active: git
   cloud:
     config:
       server:
@@ -12,6 +12,7 @@ spring:
           default-label: main # branch to connect
           force-pull: true # local changes in the cloned config-server will be discarded on restart
           timeout: 5 # wait for 5 sec
+
 encrypt:
   key: "AS8DW123S3D4G1V5X6N7M8B9N0"
 
