@@ -7,6 +7,7 @@ spring:
     config:
       server:
         native:
-          search-locations: "classpath:/config"
+          search-locations: "file:///C://Users//smariapp//IdeaProjects//Microservices"
+        #search-locations: "classpath:/config"
 server:
   port: 8071
