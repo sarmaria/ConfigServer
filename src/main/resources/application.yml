@@ -6,8 +6,11 @@ spring:
   cloud:
     config:
       server:
-        native:
-          search-locations: "file:///C://Users//smariapp//IdeaProjects//Microservices"
-        #search-locations: "classpath:/config"
+        git:
+          uri: "https://github.com/sarmaria/Banking-Configurations.git"
+          clone-on-start: true # clone the repo when config-server start or it will clone only one the first request
+          default-label: main # branch to connect
+          force-pull: true # local changes in the cloned config-server will be discarded on restart
+          timeout: 5 # wait for 5 sec
 server:
   port: 8071
