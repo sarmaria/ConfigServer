@@ -12,11 +12,12 @@ spring:
           default-label: main # branch to connect
           force-pull: true # local changes in the cloned config-server will be discarded on restart
           timeout: 5 # wait for 5 sec
-  rabbitmq:
-    host: "localhost"
-    port: 5672
-    username: "guest"
-    password: "guest"
+  # Temporarily disabling rabbitmq dependencies
+ # rabbitmq:
+ #   host: "localhost"
+ #   port: 5672
+ #   username: "guest"
+ #   password: "guest"
 
 encrypt:
   key: "AS8DW123S3D4G1V5X6N7M8B9N0"
