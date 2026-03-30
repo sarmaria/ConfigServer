@@ -31,31 +31,45 @@
 		<spring-cloud.version>2025.1.1</spring-cloud.version>
 	</properties>
 	<dependencies>
+
+		<!-- SpringBoot dependencies -->
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
+
+		<!-- Spring cloud dependencies -->
+
+		<!-- To register itself as a config server -->
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
 
+		<!-- To fetch configuration properties using rabbitmq -->
+
 		<!--<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
-		</dependency>
+		</dependency> -->
 
-		<dependency>
+		<!-- To fetch configuration properties dynamically using rabbitmq with the help of github webhook -->
+
+		<!-- <dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-monitor</artifactId>
 		</dependency>-->
+
+		<!-- Testing dependencies -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -81,7 +95,7 @@
 				<version>3.5.1</version>
 				<configuration>
 					<to>
-						<image>sarmaria/${project.artifactId}:v2</image>
+						<image>sarmaria/${project.artifactId}:v3</image>
 					</to>
 				</configuration>
 			</plugin>
